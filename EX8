@@ -1,1 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView
+            android:id="@+id/exam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Examination"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border">
+        </TextView>
+        <TextView
+            android:id="@+id/board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Board"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border">
+        </TextView>
+        <TextView
+            android:id="@+id/per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Percentage"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border">
+        </TextView>
+        <TextView
+            android:id="@+id/yop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year of passing"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border">
+        </TextView>
+    </TableRow>
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView
+            android:id="@+id/c1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class X"
+            android:textSize="20dp"
+
+            android:padding="10dp"
+            android:background="@drawable/border">
+        </TextView>
+       <EditText
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:textSize="20dp"
+           android:padding="10dp"
+           android:background="@drawable/border"></EditText>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border"></EditText>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border"></EditText>
+    </TableRow>
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView
+            android:id="@+id/c2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class XI"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border">
+        </TextView>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border"></EditText>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border"></EditText>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border"></EditText>
+    </TableRow>
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView
+            android:id="@+id/c3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class XII"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border">
+        </TextView>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border"></EditText>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border"></EditText>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:background="@drawable/border"></EditText>
+    </TableRow>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:text="submit">
+        </Button>
+
+</TableLayout>
+
+
+
+
+
+
+
+-----------------------------
+package com.example.exercise8;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Button clickButton = findViewById(R.id.submit);
+        clickButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "You have submitted the details!", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+    }
+}
+
+---------------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <solid android:color="#ffffff"/>
+    <stroke android:width="1dp" android:color="#000000"/>
+</shape>
 
